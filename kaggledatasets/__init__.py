@@ -1,1 +1,1 @@
-from kaggledatasets import core
+from kaggledatasets.core import *

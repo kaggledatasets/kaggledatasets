@@ -20,6 +20,7 @@ write_version_file()
 readme = open('README.md').read()
 
 requirements = [
+    'kaggle',
     'numpy',
     'pandas',
 ]
