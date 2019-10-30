@@ -19,11 +19,7 @@ write_version_file()
 
 readme = open('README.md').read()
 
-requirements = [
-    'kaggle',
-    'numpy',
-    'pandas',
-]
+requirements = open('requirements.txt').read().split()
 
 setup(
     name=package_name,
