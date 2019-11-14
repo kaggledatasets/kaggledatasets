@@ -32,7 +32,7 @@ Collection of Kaggle Datasets ready to use for Everyone
 
 ## Releases and Contributing
 
-kaggledatasets has a 90 day release cycle (major releases). Please let us know if you encounter a bug by [filing an issue](https://github.com/kaggledatasets/kaggledatasets/issues).  
+kaggledatasets is expecting to have a 30 day release cycle (major releases). Please let us know if you encounter a bug by [filing an issue](https://github.com/kaggledatasets/kaggledatasets/issues).  
 
 We appreciate all contributions. If you are planning to contribute back bug-fixes, please do so without any further discussion.  
 
