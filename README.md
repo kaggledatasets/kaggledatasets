@@ -15,7 +15,7 @@ Collection of Kaggle Datasets ready to use for Everyone
 |  Linux CPU  | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
 | Windows CPU | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
 
-## More About kaggledatasets
+## More About Kaggle Datasets
 
 ## Installation
 
