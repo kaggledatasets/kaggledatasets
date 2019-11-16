@@ -12,11 +12,14 @@ matrix:
       language: shell
       before_install:
         - 'python --version'
-        - 'pip install pytest --user'
-        - 'pip install codecov --user'
+        - 'pip3 install pytest --user'
+        - 'pip3 install pylint --user'
+        - 'pip3 install codecov --user'
       install:
-        - 'pip install -r requirements.txt'
-      script: 'python3 -m pytest'
+        - 'pip3 install -r requirements.txt'
+      script: 
+        - 'python3 -m pylint kaggledatasets/ tests/'
+        - 'pytest'
       after_success: 'python3 -m codecov'
     - name: 'Python 3.7 on macOS'
       os: osx
@@ -24,11 +27,14 @@ matrix:
       language: shell
       before_install:
         - 'python --version'
-        - 'pip install pytest --user'
-        - 'pip install codecov --user'
+        - 'pip3 install pytest --user'
+        - 'pip3 install pylint --user'
+        - 'pip3 install codecov --user'
       install:
-        - 'pip install -r requirements.txt'
-      script: 'python3 -m pytest'
+        - 'pip3 install -r requirements.txt'
+      script:
+        - 'python3 -m pylint kaggledatasets/ tests/' 
+        - 'pytest'
       after_success: 'python3 -m codecov'
     - name: 'Python 3.5 on Windows'
       os: windows
@@ -48,6 +54,7 @@ matrix:
         - 'python --version'
         - 'python -m pip install --upgrade pip'
         - 'pip3 install --upgrade pytest'
+        - 'pip3 install --upgrade pylint'
         - 'pip3 install codecov'
       env: 'PATH=/c/Python36:/c/Python36/Scripts:$PATH'
     - name: 'Python 3.7 on Windows'
@@ -58,15 +65,19 @@ matrix:
         - 'python --version'
         - 'python -m pip install --upgrade pip'
         - 'pip3 install --upgrade pytest'
+        - 'pip3 install --upgrade pylint'
         - 'pip3 install codecov'
       env: 'PATH=/c/Python37:/c/Python37/Scripts:$PATH'
 before_install:
   - 'python --version'
   - 'pip install -U pip'
   - 'pip install -U pytest'
+  - 'pip install -U pylint'
   - 'pip install codecov'
 install:
   - 'pip install -r requirements.txt'
-script: pytest
+script:
+  - pylint kaggledatasets/ tests/ 
+  - pytest
 after_success:
   - codecov
