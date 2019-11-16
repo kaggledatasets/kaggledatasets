@@ -9,6 +9,7 @@ Collection of Kaggle Datasets ready to use for Everyone
 - [Getting Started](#getting-started)
 - [Communication](#communication)
 - [Releases and Contributing](#releases-and-contributing)
+- [License](#license)
 
 |    System   |                                  Python 3.5                                  |                                  Python 3.6                                  |                                  Python 3.7                                  |                                  Python 3.8                                  |
 |:-----------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|
