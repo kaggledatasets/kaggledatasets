@@ -5,7 +5,8 @@ import subprocess
 from setuptools import setup, find_packages
 
 
-version = "0.1.0"
+patch = os.getenv('TRAVIS_BUILD_NUMBER')
+version = "0.1."+patch
 sha = subprocess.check_output(["git", "rev-parse", "HEAD"]).strip().decode("utf-8") 
 package_name = "kaggledatasets"
 

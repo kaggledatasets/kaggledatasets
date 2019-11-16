@@ -83,6 +83,11 @@ script:
 after_success:
   - codecov
 deploy:
+  twine_version: 1.12.1
   provider: pypi
   user: "__token__"
   password: $PYPI_API_TOKEN
+  on:
+    tags: true
+    branch: master
+    python: 3.7
