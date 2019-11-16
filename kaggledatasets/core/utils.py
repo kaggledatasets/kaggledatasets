@@ -12,16 +12,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""File Operations"""
+"""Core Utils"""
 
-import json
+import os
+import platform
 
-def read_json_file(file_location):
+
+def get_os():
+    r"""
+    Detects the OS and returns the platform name
+
+    Returns:
+        str: name of the os (linux, windows, darwin for macOS)
     """
-    Reads the JSON file at given file location and returns the json data
+
+    return platform.system().lower()
+
+def get_home_location():
+    r"""
+    Returns the home folder location i.e.
+    Windows: C:\Users\<windows username>
+    Linux/Mac: /home/<username>
+
+    Returns:
+        str: home folder location
     """
 
-    with open(file_location, 'r') as file_obj:
-        data = file_obj.read()
-
-    return json.loads(data)
+    return os.path.expanduser("~")
