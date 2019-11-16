@@ -2,7 +2,7 @@
 
 Collection of Kaggle Datasets ready to use for Everyone
 
-- [More about Kaggle Datasets](#more-about-kaggled-atasets)
+- [More about Kaggle Datasets](#more-about-kaggle-datasets)
 - [Installation](#installation)
   - [Binaries](#binaries)
   - [From Source](#from-source)
