@@ -1,0 +1,72 @@
+language: python
+dist: xenial
+python:
+  - 3.5
+  - 3.6
+  - 3.7
+matrix:
+  include:
+    - name: 'Python 3.6 on macOS'
+      os: osx
+      osx_image: xcode9.4
+      language: shell
+      before_install:
+        - 'python --version'
+        - 'pip install pytest --user'
+        - 'pip install codecov --user'
+      install:
+        - 'pip install -r requirements.txt'
+      script: 'python3 -m pytest'
+      after_success: 'python3 -m codecov'
+    - name: 'Python 3.7 on macOS'
+      os: osx
+      osx_image: xcode10.2
+      language: shell
+      before_install:
+        - 'python --version'
+        - 'pip install pytest --user'
+        - 'pip install codecov --user'
+      install:
+        - 'pip install -r requirements.txt'
+      script: 'python3 -m pytest'
+      after_success: 'python3 -m codecov'
+    - name: 'Python 3.5 on Windows'
+      os: windows
+      language: shell
+      before_install:
+        - 'choco install python --version 3.5.4'
+        - 'python --version'
+        - 'python -m pip install --upgrade pip'
+        - 'pip3 install --upgrade pytest'
+        - 'pip3 install codecov'
+      env: 'PATH=/c/Python35:/c/Python35/Scripts:$PATH'
+    - name: 'Python 3.6 on Windows'
+      os: windows
+      language: shell
+      before_install:
+        - 'choco install python --version 3.6.8'
+        - 'python --version'
+        - 'python -m pip install --upgrade pip'
+        - 'pip3 install --upgrade pytest'
+        - 'pip3 install codecov'
+      env: 'PATH=/c/Python36:/c/Python36/Scripts:$PATH'
+    - name: 'Python 3.7 on Windows'
+      os: windows
+      language: shell
+      before_install:
+        - 'choco install python --version 3.7.4'
+        - 'python --version'
+        - 'python -m pip install --upgrade pip'
+        - 'pip3 install --upgrade pytest'
+        - 'pip3 install codecov'
+      env: 'PATH=/c/Python37:/c/Python37/Scripts:$PATH'
+before_install:
+  - 'python --version'
+  - 'pip install -U pip'
+  - 'pip install -U pytest'
+  - 'pip install codecov'
+install:
+  - 'pip install -r requirements.txt'
+script: pytest
+after_success:
+  - codecov
