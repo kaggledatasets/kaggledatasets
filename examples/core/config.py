@@ -12,4 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Kaggle Datasets Examples"""
+"""Kaggle Datasets Core Examples"""
+
+from kaggledatasets.core import Config
+
+
+cfg = Config()
+print(cfg.get_credentials())
+print(cfg.get_username())
+print(cfg.get_token())
