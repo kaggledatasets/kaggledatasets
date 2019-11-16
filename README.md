@@ -10,10 +10,10 @@ Collection of Kaggle Datasets ready to use for Everyone
 - [Communication](#communication)
 - [Releases and Contributing](#releases-and-contributing)
 
-|    System   |                                      3.5                                     |
-|:-----------:|:----------------------------------------------------------------------------:|
-|  Linux CPU  | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
-| Windows CPU | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
+|    System   |                                  Python 3.5                                  |                                  Python 3.6                                  |                                  Python 3.7                                  |                                  Python 3.8                                  |
+|:-----------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|
+|  Linux CPU  | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
+| Windows CPU | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
 
 ## More About Kaggle Datasets
 
