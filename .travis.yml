@@ -19,7 +19,7 @@ matrix:
         - 'pip3 install -r requirements.txt'
       script: 
         - 'python3 -m pylint kaggledatasets/ tests/'
-        - 'pytest'
+        - 'python3 -m pytest'
       after_success: 'python3 -m codecov'
     - name: 'Python 3.7 on macOS'
       os: osx
@@ -34,7 +34,7 @@ matrix:
         - 'pip3 install -r requirements.txt'
       script:
         - 'python3 -m pylint kaggledatasets/ tests/' 
-        - 'pytest'
+        - 'python3 -m pytest'
       after_success: 'python3 -m codecov'
     - name: 'Python 3.5 on Windows'
       os: windows
@@ -44,6 +44,7 @@ matrix:
         - 'python --version'
         - 'python -m pip install --upgrade pip'
         - 'pip3 install --upgrade pytest'
+        - 'pip3 install --upgrade pylint'
         - 'pip3 install codecov'
       env: 'PATH=/c/Python35:/c/Python35/Scripts:$PATH'
     - name: 'Python 3.6 on Windows'
