@@ -25,7 +25,7 @@ KAGGLE_CONFIG_FILE_NAME = "kaggle.json"
 JSON_KEY_USERNAME = "username"
 JSON_KEY_TOKEN = "key"
 
-class Config(object):
+class Config(object): # pylint: disable=useless-object-inheritance
     r"""
     This class contains kaggle configuration related methods
 
