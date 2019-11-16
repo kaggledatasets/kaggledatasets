@@ -82,3 +82,7 @@ script:
   - pytest
 after_success:
   - codecov
+deploy:
+  provider: pypi
+  user: "__token__"
+  password: $PYPI_API_TOKEN
