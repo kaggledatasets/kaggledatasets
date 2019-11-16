@@ -2,6 +2,10 @@
 
 Collection of Kaggle Datasets ready to use for Everyone
 
+![License](https://img.shields.io/github/license/kaggledatasets/kaggledatasets) 
+![Release](https://img.shields.io/github/v/release/kaggledatasets/kaggledatasets)
+![Platform Support](https://img.shields.io/pypi/pyversions/kaggledatasets)
+
 - [More about Kaggle Datasets](#more-about-kaggle-datasets)
 - [Installation](#installation)
   - [Binaries](#binaries)
@@ -11,10 +15,11 @@ Collection of Kaggle Datasets ready to use for Everyone
 - [Releases and Contributing](#releases-and-contributing)
 - [License](#license)
 
-|    System   |                                  Python 3.5                                  |                                  Python 3.6                                  |                                  Python 3.7                                  |                                  Python 3.8                                  |
-|:-----------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|
-|  Linux CPU  | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
-| Windows CPU | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
+|  System |                                  Python 3.5                                  |                                  Python 3.6                                  |                                  Python 3.7                                  |
+|:-------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|
+|  Linux  | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
+|  macOS  | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
+| Windows | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) | ![Build Status](https://img.shields.io/travis/kaggledatasets/kaggledatasets) |
 
 ## More About Kaggle Datasets
 
