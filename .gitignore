@@ -76,3 +76,8 @@ venv.bak/
 
 # Version
 kaggledatasets/version.py
+
+# Custom
+.DS_Store*
+*.zip
+*.tar.gz

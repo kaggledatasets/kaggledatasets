@@ -15,5 +15,7 @@
 """Kaggle Datasets Core"""
 
 from kaggledatasets.core.config import Config
+from kaggledatasets.core.downloader import download_dataset, build_command
 from kaggledatasets.core.utils import get_os, get_home_location
 from kaggledatasets.core.fileops import read_json_file
+from kaggledatasets.core.dataset import Dataset

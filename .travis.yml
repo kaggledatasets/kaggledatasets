@@ -18,7 +18,7 @@ matrix:
       install:
         - 'pip3 install -r requirements.txt'
       script: 
-        - 'python3 -m pylint kaggledatasets/ tests/'
+        - 'python3 -m pylint kaggledatasets/ tests/ examples/'
         - 'python3 -m pytest'
       after_success: 'python3 -m codecov'
     - name: 'Python 3.7 on macOS'
@@ -33,7 +33,7 @@ matrix:
       install:
         - 'pip3 install -r requirements.txt'
       script:
-        - 'python3 -m pylint kaggledatasets/ tests/' 
+        - 'python3 -m pylint kaggledatasets/ tests/ examples/' 
         - 'python3 -m pytest'
       after_success: 'python3 -m codecov'
     - name: 'Python 3.5 on Windows'
@@ -78,7 +78,7 @@ before_install:
 install:
   - 'pip install -r requirements.txt'
 script:
-  - pylint kaggledatasets/ tests/ 
+  - pylint kaggledatasets/ tests/ examples/ 
   - pytest
 after_success:
   - codecov

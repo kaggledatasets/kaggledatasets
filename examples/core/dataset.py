@@ -12,17 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Tests for Core Config"""
+"""Kaggle Datasets Core Examples"""
 
-from kaggledatasets.core.config import * # pylint: disable=wildcard-import,unused-wildcard-import
+from kaggledatasets.core import Dataset
 
-
-def test_constants():
-    """
-    Test constants
-    """
-
-    assert KAGGLE_DIR_NAME == ".kaggle"
-    assert KAGGLE_CONFIG_FILE_NAME == "kaggle.json"
-    assert JSON_KEY_USERNAME == "username"
-    assert JSON_KEY_TOKEN == "key"
+dataset = Dataset(author="ronitf", slug="heart-disease-uci", root="/home/omkar", title="Heart Disease UCI", download=True)

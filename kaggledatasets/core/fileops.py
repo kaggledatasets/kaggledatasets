@@ -14,14 +14,28 @@
 
 """File Operations"""
 
+import os
 import json
 
 def read_json_file(file_location):
     """
     Reads the JSON file at given file location and returns the json data
+
+    Returns:
+        dict: JSON data converted into python dictionary
     """
 
     with open(file_location, 'r') as file_obj:
         data = file_obj.read()
 
     return json.loads(data)
+
+def check_if_exists(file_location):
+    """
+    For given file location, checks if that file or folder exists
+
+    Returns:
+        bool: Status is true if file/folder exists, else false
+    """
+
+    return os.path.exists(file_location)
