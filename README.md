@@ -23,13 +23,50 @@ Collection of Kaggle Datasets ready to use for Everyone
 
 ## More About Kaggle Datasets
 
+```python
+import kaggledatasets as kd
+
+dataset = kd.structured.CreditCardFraudDetection(download=True)
+# Returns the split for train and test in Scikit and Tensorflow
+train, test = dataset.load()
+# Returns the train and test data loader for PyTorch
+train_dataloader, test_dataloader = dataset.dataloader()
+```
+
 ## Installation
 
 ### Binaries
 
+Commands to install from binaries via Conda or pip wheels are on our website: [https://kaggledatasets.github.io](https://kaggledatasets.github.io)
+
 ### From Source
 
+#### Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+#### Get the kaggledatasets Source
+
+```
+git clone --recursive https://github.com/kaggledatasets/kaggledatasets
+cd kaggledatasets
+```
+
+#### Install kaggledatasets
+
+```
+python setup.py install
+```
+
 ## Getting Started
+
+* [Tutorials: Get started with understanding kaggledatasets](https://kaggledatasets.github.io/tutorials)
+
+* [Examples: Easy to understand kaggledatasets code](https://kaggledatasets.github.io/docs/examples)
+
+* [API Reference](https://kaggledatasets.github.io/docs)
 
 ## Communication
 
