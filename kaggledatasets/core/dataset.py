@@ -75,7 +75,7 @@ class Dataset(object):  # pylint: disable=E0012,R0205
             bool: Returns true if all files exist, else false
         """
 
-        # tddo: recursively travel to check if all files are present
+        # TODO: recursively travel to check if all files are present # pylint: disable=W0511
         return check_if_exists(self.get_files())
 
     def list_files(self):
@@ -96,7 +96,7 @@ class Dataset(object):  # pylint: disable=E0012,R0205
             list: List of python dict containing file name, size, creation date
         """
 
-        # todo: return list of all files with their location
+        # TODO: return list of all files with their location # pylint: disable=W0511
         if self.root is None:
             return self.slug
         return os.path.join(self.root, self.slug)
