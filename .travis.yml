@@ -75,23 +75,20 @@ before_install:
   - 'pip install -U pytest'
   - 'pip install -U pylint'
   - 'pip install codecov'
-  - wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-  - chmod +x miniconda.sh
-  - ./miniconda.sh -b
-  - export PATH=$HOME/miniconda3/bin:$PATH
-  - conda update --yes -q conda
-  - conda config --set always_yes true
-  - conda config --set anaconda_upload no
 install:
   - 'pip install -r requirements.txt'
-  - conda install -q python=$TRAVIS_PYTHON_VERSION pip requests conda-build jinja2 anaconda-client 
-  - conda install --use-local kaggledatasets
+  - wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
 script:
   - pylint kaggledatasets/ tests/ examples/ 
   - pytest
 after_success:
   - codecov
-  - chmod +x ./scripts/deploy_anaconda.sh
+  - conda install conda-build && conda install anaconda-client && bash scripts/conda_upload.sh
 deploy:
   - provider: script
     script: ./scripts/deploy_anaconda.sh
