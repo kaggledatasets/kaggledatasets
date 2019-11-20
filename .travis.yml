@@ -75,6 +75,8 @@ before_install:
   - 'pip install -U pytest'
   - 'pip install -U pylint'
   - 'pip install codecov'
+  - 'pip install anaconda-client'
+  - 'anaconda -h'
 install:
   - 'pip install -r requirements.txt'
   - source ./scripts/conda/conda_install.sh
