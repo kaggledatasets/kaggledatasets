@@ -77,7 +77,7 @@ before_install:
   - 'pip install codecov'
 install:
   - 'pip install -r requirements.txt'
-  - source ./scripts/conda_install.sh
+  - source ./scripts/conda/conda_install.sh
 script:
   - pylint kaggledatasets/ tests/ examples/ 
   - pytest
@@ -86,7 +86,7 @@ after_success:
   - conda install conda-build && conda install anaconda-client
 deploy:
   - provider: script
-    script: ./scripts/conda_upload.sh
+    script: ./scripts/conda/conda_upload.sh
     on:
       branch: master
       python: 3.7
