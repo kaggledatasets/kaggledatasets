@@ -75,19 +75,35 @@ before_install:
   - 'pip install -U pytest'
   - 'pip install -U pylint'
   - 'pip install codecov'
+  - wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
+  - chmod +x miniconda.sh
+  - ./miniconda.sh -b
+  - export PATH=$HOME/miniconda2/bin:$PATH
+  - conda update --yes -q conda
+  - conda config --set always_yes true
+  - conda config --set anaconda_upload no
 install:
   - 'pip install -r requirements.txt'
+  - conda install -q python=$TRAVIS_PYTHON_VERSION pip requests conda-build jinja2 anaconda-client 
+  - conda build conda-recipe
+  - conda install --use-local kaggledatasets
 script:
   - pylint kaggledatasets/ tests/ examples/ 
   - pytest
 after_success:
   - codecov
-# deploy:
-#   twine_version: 1.12.1
-#   provider: pypi
-#   user: '__token__'
-#   password: $PYPI_API_TOKEN
-#   distributions: 'sdist bdist_wheel'
-#   on:
-#     branch: master
-#     python: 3.7
+  - chmod +x ./scripts/deploy_anaconda.sh
+deploy:
+  - provider: script
+    script: ./scripts/deploy_anaconda.sh
+    on:
+      tags: true
+    skip_cleanup: true
+  # - provider: pypi
+  #   twine_version: 1.12.1
+  #   user: '__token__'
+  #   password: $PYPI_API_TOKEN
+  #   distributions: 'sdist bdist_wheel'
+  #   on:
+  #     branch: master
+  #     python: 3.7
