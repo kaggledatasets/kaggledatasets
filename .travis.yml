@@ -82,12 +82,12 @@ script:
   - pytest
 after_success:
   - codecov
-deploy:
-  twine_version: 1.12.1
-  provider: pypi
-  user: '__token__'
-  password: $PYPI_API_TOKEN
-  distributions: 'sdist bdist_wheel'
-  on:
-    branch: master
-    python: 3.7
+# deploy:
+#   twine_version: 1.12.1
+#   provider: pypi
+#   user: '__token__'
+#   password: $PYPI_API_TOKEN
+#   distributions: 'sdist bdist_wheel'
+#   on:
+#     branch: master
+#     python: 3.7

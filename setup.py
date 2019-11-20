@@ -5,7 +5,7 @@ import subprocess
 from setuptools import setup, find_packages
 
 
-version = "0.1.3"
+version = "0.0.1"
 sha = subprocess.check_output(["git", "rev-parse", "HEAD"]).strip().decode("utf-8") 
 package_name = "kaggledatasets"
 
