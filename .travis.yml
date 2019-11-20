@@ -85,7 +85,6 @@ before_install:
 install:
   - 'pip install -r requirements.txt'
   - conda install -q python=$TRAVIS_PYTHON_VERSION pip requests conda-build jinja2 anaconda-client 
-  - conda build conda-recipe
   - conda install --use-local kaggledatasets
 script:
   - pylint kaggledatasets/ tests/ examples/ 
