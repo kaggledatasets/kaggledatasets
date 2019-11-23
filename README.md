@@ -38,7 +38,8 @@ for batch, label in dataset.take(1):
         ...
 
 # Returns the data loader for PyTorch
-# Work in progress for PyTorch support```
+# Work in progress for PyTorch support
+```
 
 ## Installation
 
