@@ -1,0 +1,6 @@
+  
+[MASTER]
+ignore=CVS, .svn, .git
+
+[MESSAGES CONTROL]
+disable=duplicate-code

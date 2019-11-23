@@ -15,9 +15,10 @@
 """Kaggle Dataset"""
 
 import os
+from abc import abstractmethod
 
 from kaggledatasets.core.fileops import check_if_exists
-from kaggledatasets.core.downloader import download_dataset, list_files
+from kaggledatasets.core.downloader import download_dataset
 
 
 class Dataset(object):  # pylint: disable=E0012,R0205
@@ -56,7 +57,7 @@ class Dataset(object):  # pylint: disable=E0012,R0205
 
         if not self.is_downloaded:
             if not download:
-                print("dataset is not downloaded, set flag download=True in constructor") # pylint: disable=C0325
+                raise Exception("dataset is not downloaded, set flag download=True in constructor") # pylint: disable=C0325
             else:
                 self.download_files(use_force=False)
         else:
@@ -64,8 +65,6 @@ class Dataset(object):  # pylint: disable=E0012,R0205
                 print("dataset is already downloaded") # pylint: disable=C0325
             else:
                 self.download_files(use_force=True)
-
-        self.files = self.get_files()
 
     def _check_if_exists(self):
         r"""
@@ -75,18 +74,12 @@ class Dataset(object):  # pylint: disable=E0012,R0205
             bool: Returns true if all files exist, else false
         """
 
-        # TODO: recursively travel to check if all files are present # pylint: disable=W0511
-        return check_if_exists(self.get_files())
+        files = self.get_files()
+        for file_path in files:
+            if not check_if_exists(file_path):
+                return False
 
-    def list_files(self):
-        r"""
-        Returns a list of files available for this dataset
-
-        Returns:
-            list: List of python dict containing file name, size, creation date
-        """
-
-        list_files(self.author, self.slug)
+        return True
 
     def get_files(self):
         r"""
@@ -96,10 +89,15 @@ class Dataset(object):  # pylint: disable=E0012,R0205
             list: List of python dict containing file name, size, creation date
         """
 
-        # TODO: return list of all files with their location # pylint: disable=W0511
-        if self.root is None:
-            return self.slug
-        return os.path.join(self.root, self.slug)
+        basepath = self.slug
+        if self.root:
+            basepath = os.path.join(self.root, self.slug)
+
+        files = []
+        for filename in self.files:
+            files.append(os.path.join(basepath, filename))
+
+        return files
 
     def download_files(self, use_force=False):
         r"""
@@ -108,12 +106,35 @@ class Dataset(object):  # pylint: disable=E0012,R0205
 
         download_dataset(self.author, self.slug, file_path=self.root, use_force=use_force)
 
-    def __getitem__(self, idx):
+    def __getitem__(self, index):
         r"""
-        Returns the dataset file existing in list of files by given index
-
-        Returns:
-            dict: File information like name, size and creation date
+        This will return one sample of data
         """
+        raise NotImplementedError
 
-        return self.files[idx]
+    def __len__(self):
+        r"""
+        This denotes the total number of samples
+        """
+        raise NotImplementedError
+
+    @abstractmethod
+    def data_frame(self):
+        r"""
+        This will return pandas data frame for using in Scikit Learn or raw processing
+        """
+        raise NotImplementedError
+
+    @abstractmethod
+    def load(self, batch_size=1):
+        r"""
+        This will return tf dataset for Tensorflow 2.0
+        """
+        raise NotImplementedError
+
+    @abstractmethod
+    def data_loader(self):
+        r"""
+        This will return data loader for PyTorch
+        """
+        raise NotImplementedError

@@ -87,12 +87,12 @@ after_success:
   - codecov
   - conda install conda-build && conda install anaconda-client
 deploy:
-  - provider: script
-    script: ./scripts/conda/conda_upload.sh
-    on:
-      branch: master
-      python: 3.7
-    skip_cleanup: true
+  # - provider: script
+  #   script: ./scripts/conda/conda_upload.sh
+  #   on:
+  #     branch: master
+  #     python: 3.7
+  #   skip_cleanup: true
   # - provider: pypi
   #   twine_version: 1.12.1
   #   user: '__token__'

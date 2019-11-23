@@ -13,3 +13,6 @@
 # limitations under the License.
 
 """Kaggle Structured Datasets"""
+
+from kaggledatasets.structured.heart_disease_uci import HeartDiseaseUCI
+from kaggledatasets.structured.newyork_airbnb_opendata import NewYorkAirbnbOpenData
