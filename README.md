@@ -17,9 +17,9 @@ Collection of Kaggle Datasets ready to use for Everyone
 
 |  System |                                Python 3.5                               |                                Python 3.6                               |                                Python 3.7                               |
 |:-------:|:-----------------------------------------------------------------------:|:-----------------------------------------------------------------------:|:-----------------------------------------------------------------------:|
-|  Linux  | ![Build Status](https://kaggledatasets.herokuapp.com/ci/travis/build/1) | ![Build Status](https://kaggledatasets.herokuapp.com/ci/travis/build/2) | ![Build Status](https://kaggledatasets.herokuapp.com/ci/travis/build/3) |
-|  macOS  |                                                                         | ![Build Status](https://kaggledatasets.herokuapp.com/ci/travis/build/4) | ![Build Status](https://kaggledatasets.herokuapp.com/ci/travis/build/5) |
-| Windows | ![Build Status](https://kaggledatasets.herokuapp.com/ci/travis/build/6) | ![Build Status](https://kaggledatasets.herokuapp.com/ci/travis/build/7) | ![Build Status](https://kaggledatasets.herokuapp.com/ci/travis/build/8) |
+|  Linux  | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/kaggledatasets/kaggledatasets/branches/master/1) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/kaggledatasets/kaggledatasets/branches/master/2) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/kaggledatasets/kaggledatasets/branches/master/3) |
+|  macOS  |                                                                         | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/kaggledatasets/kaggledatasets/branches/master/4) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/kaggledatasets/kaggledatasets/branches/master/5) |
+| Windows | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/kaggledatasets/kaggledatasets/branches/master/6) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/kaggledatasets/kaggledatasets/branches/master/7) | ![Build Status](https://travis-matrix-badges.herokuapp.com/repos/kaggledatasets/kaggledatasets/branches/master/8) |
 
 ## More About Kaggle Datasets
 
