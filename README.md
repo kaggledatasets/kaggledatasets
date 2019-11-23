@@ -34,7 +34,7 @@ df = heart_disease.data_frame()
 # Returns the tensorflow dataset type compatible with TF 2.0
 dataset = heart_disease.load()
 for batch, label in dataset.take(1):
-	for key, value in batch.items():
+    for key, value in batch.items():
         ...
 
 # Returns the data loader for PyTorch
@@ -71,9 +71,7 @@ python setup.py install
 ## Getting Started
 
 * [Tutorials: Get started with understanding kaggledatasets](https://kaggledatasets.github.io/tutorials)
-
-* [Examples: Easy to understand kaggledatasets code](https://kaggledatasets.github.io/docs/examples)
-
+* [Examples: Easy to understand kaggledatasets code](https://github.com/kaggledatasets/kaggledatasets/tree/master/examples)
 * [API Reference](https://kaggledatasets.github.io/docs)
 
 ## Communication
