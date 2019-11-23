@@ -55,16 +55,12 @@ class Dataset(object):  # pylint: disable=E0012,R0205
         self.download = download
         self.is_downloaded = self._check_if_exists()
 
-        if not self.is_downloaded:
-            if not download:
+        if not download:
+            if not self.is_downloaded:
                 raise Exception("dataset is not downloaded, set flag download=True in constructor") # pylint: disable=C0325
-            else:
-                self.download_files(use_force=False)
+            print("dataset is already downloaded") # pylint: disable=C0325
         else:
-            if not download:
-                print("dataset is already downloaded") # pylint: disable=C0325
-            else:
-                self.download_files(use_force=True)
+            self.download_files(use_force=True)
 
     def _check_if_exists(self):
         r"""
