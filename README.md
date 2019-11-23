@@ -26,12 +26,19 @@ Collection of Kaggle Datasets ready to use for Everyone
 ```python
 import kaggledatasets as kd
 
-dataset = kd.structured.CreditCardFraudDetection(download=True)
-# Returns the split for train and test in Scikit and Tensorflow
-train, test = dataset.load()
-# Returns the train and test data loader for PyTorch
-train_dataloader, test_dataloader = dataset.dataloader()
-```
+heart_disease = kd.structured.HeartDiseaseUCI(download=True)
+
+# Returns the pandas data frame to be used in Scikit Learn or any other framework
+df = heart_disease.data_frame()
+
+# Returns the tensorflow dataset type compatible with TF 2.0
+dataset = heart_disease.load()
+for batch, label in dataset.take(1):
+	for key, value in batch.items():
+        ...
+
+# Returns the data loader for PyTorch
+# Work in progress for PyTorch support```
 
 ## Installation
 
