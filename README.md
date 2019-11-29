@@ -49,17 +49,17 @@ Commands to install from binaries via Conda or pip wheels are on our website: [h
 
 ### From Source
 
-#### Install Dependencies
-
-```
-pip install -r requirements.txt
-```
-
 #### Get the kaggledatasets Source
 
 ```
 git clone --recursive https://github.com/kaggledatasets/kaggledatasets
 cd kaggledatasets
+```
+
+#### Install Dependencies
+
+```
+pip install -r requirements.txt
 ```
 
 #### Install kaggledatasets
@@ -70,9 +70,9 @@ python setup.py install
 
 ## Getting Started
 
-* [Tutorials: Get started with understanding kaggledatasets](https://kaggledatasets.github.io/tutorials)
+* [Tutorials: Get started with kaggledatasets](https://kaggledatasets.github.io/get-started)
 * [Examples: Easy to understand kaggledatasets code](https://github.com/kaggledatasets/kaggledatasets/tree/master/examples)
-* [API Reference](https://kaggledatasets.github.io/docs)
+* [API Reference](https://kaggledatasets.readthedocs.io)
 
 ## Communication
 
