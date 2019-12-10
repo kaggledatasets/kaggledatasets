@@ -12,9 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Kaggle Structured Datasets"""
+"""Kaggle Datasets Structured Examples"""
 
-from kaggledatasets.structured.heart_disease_uci import HeartDiseaseUCI
-from kaggledatasets.structured.newyork_airbnb_opendata import NewYorkAirbnbOpenData
-from kaggledatasets.structured.wine_reviews import WineReviews
-from kaggledatasets.structured.european_soccer_database import EuropeanSoccerDatabase
+import kaggledatasets as kd
+
+wine_reviews = kd.structured.WineReviews(download=True)
+
+df = wine_reviews.data_frame()
+print(df.head())
+print(df.tail())
