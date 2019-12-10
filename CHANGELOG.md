@@ -1,4 +1,4 @@
-# v0.0.2 (2019-11-30)
+# v0.0.2 (2019-12-19)
 * Minor bug fixes and code refactoring
 * Added 4 Structured datasets from Kaggle covering file types: CSV, JSON and SQLITE
 * Added some tests to cover the structured examples
