@@ -81,3 +81,6 @@ kaggledatasets/version.py
 .DS_Store*
 *.zip
 *.tar.gz
+*.sqlite
+*.json
+*.csv
