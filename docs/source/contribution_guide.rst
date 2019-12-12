@@ -1,0 +1,3 @@
+kaggledatasets Contributing Guide
+=================================
+
