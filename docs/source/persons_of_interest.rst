@@ -1,5 +1,5 @@
-kaggledatasets Persons of Interest
-==================================
+Persons of Interest
+===================
 
 General Maintainers
 -------------------
