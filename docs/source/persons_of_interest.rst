@@ -1,6 +1,9 @@
 Persons of Interest
 ===================
 
+Looking for contributors who can be our Persons of Interest
+-----------------------------------------------------------
+
 General Maintainers
 -------------------
 
@@ -12,8 +15,12 @@ Module-level maintainers
 Core
 ^^^^^
 
+* Omkar Prabhu (`prabhuomkar <https://github.com/prabhuomkar>`_)
+
 Structured
 ^^^^^^^^^^^
+
+* Omkar Prabhu (`prabhuomkar <https://github.com/prabhuomkar>`_)
 
 Tutorials
 ^^^^^^^^^^
